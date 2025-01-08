@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --background: linear-gradient(135deg, #3b99bbce 0%, #1486afd7 100%);
+    --color-primary: #16707c ;
+    --color-secondary: #117194fb;
+    --boton-padding: 20px 40px;
+} /*cette variable a plus de specificité*/
+
+body{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+
+.container{
+    width:90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px;
+    max-width: 1200px;
+    padding-bottom: 30px;
+}
+
+.subtitle{
+    color: var(--color-primary);  
+    font-size: 2.0rem;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.sports{
+    background: #ffffffce;
+    margin-bottom: 0%;
+    
+}
+
+.sports .container{
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    
+}
+
+.sports_grid{
+    display: grid;
+    height: 550px;
+    grid-template-areas: 
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 10px;
+}
+
+.sports_item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sports_image{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    cursor: pointer; /*quand je pose la souris sur l'image un main apparait*/
+}
+
+.sports_item:nth-of-type(1){
+    grid-area: img1;
+}
+
+.sports_item:nth-of-type(2){
+    grid-area: img2;
+}
+
+.sports_item:nth-of-type(3){
+    grid-area: img3;
+}
+
+.sports_item:nth-of-type(4){
+    grid-area: img4;
+}
+
+.sports_item:nth-of-type(5){
+    grid-area: img5;
+}
+
+.sports_hover{
+    position: absolute;
+    background: rgba(24, 167, 148, 0.541);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%)
+}
+
+.sports_item:hover .sports_hover{
+    transform: translateX(0%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.sports_icon{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+
+/*footer*/
+
+.footer{
+    background-color: #773737;
+}
+
+.footer_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.footer_copyright{
+    display:inline-block;
+    align-self: center;
+    text-align: center;
+    color: #fff;
+    align-self: flex-end;
+
+}
+
+.footer_title{
+    font-weight: 1000;
+    color: #dbd9d9;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer_icons{
+    display:flex;
+    justify-content: center; /*distribution equitative*/
+    color:#ffffff;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.footer_container--icons{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.footer_icons{
+    color: #fff;
+    font-size:30px;
+    text-decoration: none;
+}
+
+.nav--footer{
+    font-weight: 1000;
+    justify-content: flex-start;
+}
+
+.nav_items{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav__items--footer{
+    padding: 10px ;
+}
+
+.fa-brands.footer_icons{
+    line-height: 60px; /*para centrar el ícono en el círculo siendo específico con la orden(1ra parte nombre del icono)*/
+}
+
+/*mediaQ*/
+
+@media  screen and (max-width:800px) {
+    .sports_grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+    } 
+
+    #sports_image1 {
+        max-height: 400px;    
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    .sports_image {
+        object-fit: fill;
+        max-height: 350px;
+    }
+    #sports_image1 {
+        max-height: 320px;    
+    }
+    .footer {
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        
+    }
+    .footer_grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+        align-items: center;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav--footer{
+        font-weight: 1000;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer_copyright{
+        display:inline-block;
+        align-self: center;
+        text-align: center;
+        color: #fff;
+    }
+    
+}
+
+
+@media screen and (max-width:290px) {
+
+    #sports_image1 {
+        max-height: 170px;    
+    }
+}

@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --background: linear-gradient(135deg, #2f98c969 0%, #218bc94b 100%);
+    --color-primary: white;
+    --color-secondary: #1e3e46;
+    --boton-padding: 20px 40px;
+} /*cette variable a plus de specificité*/
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: white;
+    margin: 0;
+}
+
+h1{font-size: 2em;
+    text-shadow:2px 2px 20px rgba(255, 255, 255, 0.5);}
+h2{font-size: 1.8em}
+h3{font-size: 1.2em}
+p{font-size: 1em;}
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: #4EBFAE; 
+}
+
+button:hover{
+    background-color: #3e9688;
+}
+
+
+header{
+    background-color:white;
+}
+
+
+header .container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    padding-bottom: 30px;
+}
+
+header a{
+    text-decoration: none;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    color: #773737;
+    font-weight: bold;  
+    font-size: 1.2em;
+}
+
+header a:hover{
+    color: #FDD459    
+}
+
+
+#description{
+    color: black;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.description .container{
+    margin: 10px 60px;
+    padding: 10px 10px;
+}
+
+#agences{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.agences .container{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.agences h2{
+    text-align: center;
+    color:#2d7065
+}
+
+.agences p{
+    text-align:justify;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 15px;
+}
+
+
+#agences .card{
+    display: flex;
+    background-position: center center;
+    background-size: cover;
+    color: rgb(49, 48, 48);
+    padding:20px;
+    margin: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.027),
+        rgba(0, 0, 0, 0.041)
+    );
+}
+
+.card:nth-child(2){   
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.027),
+        rgba(0, 0, 0, 0.041)
+    );
+}
+
+.card:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.027),
+        rgba(0, 0, 0, 0.041)
+    );
+    margin-top: 30px;
+}
+
+
+.subtitle{
+    color: var(--color-primary);  
+    font-size: 2.0rem;
+    margin-bottom: 35px;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-start;
+}
+
+.nav_items{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav_items--cta{
+    border: 1px solid #fff;
+}
+
+.nav__items--footer{
+    padding: 10px ;
+}
+
+.hero{
+    height: 100vh;
+    background-image: var(--background), url('assets_accueil/rafting_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.hero .container{
+    padding: 0;
+}
+.hero_container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items:center;
+    color: white;
+}
+
+.hero_title{
+    padding-top: 80px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+    margin-top: 150px;
+    color: white;
+}
+
+
+.hero_wave{
+    position:absolute;
+    bottom: 0; /*comme ca la wave se positionne dans la partie bottom*/
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+/*footer*/
+
+.footer{
+    background-color: #773737;
+}
+
+
+.footer_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.footer_copyright{
+    display:inline-block;
+    align-self: center;
+    text-align: center;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.footer_title{
+    font-weight: 1000;
+    color: #dbd9d9;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer_icons{
+    display:flex;
+    justify-content: center; /*distribution equitative*/
+    color:#ffffff;
+    margin-bottom: 5px;
+}
+
+.footer_container--icons{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    margin: 7px;
+}
+
+.footer_icons{
+    color: #fff;
+    font-size:30px;
+    text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav--footer{
+    font-weight: 1000;
+    justify-content: flex-start;
+}
+
+.nav_items{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav_items--cta{
+    border: 1px solid #fff;
+}
+
+.nav__items--footer{
+    padding: 10px ;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav--footer{
+    font-weight: 1000;
+    justify-content: flex-start;
+}
+
+.nav_items{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav_items--cta{
+    border: 1px solid #fff;
+}
+
+.nav__items--footer{
+    padding: 10px ;
+}
+
+.fa-brands.footer_icons{
+    color: white;
+    line-height: 60px; /*para centrar el ícono en el círculo siendo específico con la orden(1ra parte nombre del icono)*/
+}
+
+
+/* responsive*/ 
+
+@media  screen and (max-width:800px) {
+
+    .agences p{
+        text-align:justify;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 15px;
+        max-width: 800px;
+    }
+    
+    
+    #agences .card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width:650px) {
+
+    
+    .footer {
+        width: 100%;
+        overflow: hidden;
+        
+    }
+    .footer_grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0px;
+        align-items: center;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav--footer{
+        font-weight: 1000;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer_copyright{
+        display:inline-block;
+        align-self: center;
+        text-align: center;
+        color: #fff;
+    }
+    
+}
